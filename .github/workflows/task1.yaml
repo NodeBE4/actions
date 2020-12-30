@@ -29,5 +29,6 @@ jobs:
           USER_AGENT: ${{ secrets.USER_AGENT }}
           USERNAME: ${{ secrets.USERNAME }}
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+          API_TOKEN_GITLAB: ${{ secrets.API_TOKEN_GITLAB }}
           USERNAME1_GITHUB: ${{ secrets.USERNAME1_GITHUB }}
           REPO1_GITHUB: ${{ secrets.REPO1_GITHUB }}
