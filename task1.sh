@@ -17,10 +17,6 @@ workdir="work";
 checkout_work ${workrepo} ${workdir};
 cd ${workdir};
 
-echo "Install dependencies" ;
-python -m pip install --upgrade pip
-if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
 echo "Start task1" ;
 chmod +x ./run.sh ;
 ./run.sh ;
