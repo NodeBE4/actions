@@ -1,4 +1,4 @@
-name: CI
+name: task1
 
 on:
   push:
@@ -29,5 +29,5 @@ jobs:
           USER_AGENT: ${{ secrets.USER_AGENT }}
           USERNAME: ${{ secrets.USERNAME }}
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-          USERNAME_GITHUB: ${{ secrets.USERNAME_GITHUB }}
+          USERNAME1_GITHUB: ${{ secrets.USERNAME1_GITHUB }}
           REPO1_GITHUB: ${{ secrets.REPO1_GITHUB }}

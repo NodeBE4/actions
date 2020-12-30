@@ -1,6 +1,6 @@
 #!/bin/bash
-git config --global user.email "{USERNAME_GITHUB}@github.com";
-git config --global user.name "${USERNAME_GITHUB}";
+git config --global user.email "{USERNAME1_GITHUB}@github.com";
+git config --global user.name "${USERNAME1_GITHUB}";
 git config --global pull.rebase false;
 
 checkout_work () {
@@ -12,7 +12,7 @@ checkout_work () {
 }
 
 
-workrepo=https://$API_TOKEN_GITHUB@github.com/$USERNAME_GITHUB/$REPO1_GITHUB.git;
+workrepo=https://$API_TOKEN_GITHUB@github.com/$USERNAME1_GITHUB/$REPO1_GITHUB.git;
 workdir="work";
 checkout_work ${workrepo} ${workdir};
 cd ${workdir};
