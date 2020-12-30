@@ -17,7 +17,7 @@ workdir="work";
 checkout_work ${workrepo} ${workdir};
 cd ${workdir};
 
-echo "Start task2" ;
+echo "Start task3" ;
 chmod +x ./run.sh ;
 ./run.sh ;
 
