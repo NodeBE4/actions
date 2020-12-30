@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: "20 * * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v2
+        with:
+          lfs: false
+      - name: Update data
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.6' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+          architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
+      - name: Run task
+        run: |
+          sh ./task1.sh
+        env:
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          USER_AGENT: ${{ secrets.USER_AGENT }}
+          USERNAME: ${{ secrets.USERNAME }}
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+          USERNAME_GITHUB: ${{ secrets.USERNAME_GITHUB }}
+          REPO1_GITHUB: ${{ secrets.REPO1_GITHUB }}
