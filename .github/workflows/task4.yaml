@@ -1,0 +1,37 @@
+name: task4
+
+on:
+  # push:
+  #   branches: [ main ]
+  schedule:
+    - cron: "0 13 * * 1"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v2
+        with:
+          lfs: false
+      - name: Update data
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.6' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+          architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
+      - name: Run task
+        run: |
+          git commit --allow-empty -m"update";
+          git push
+        env:
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+          CLIENT_ID_2: ${{ secrets.CLIENT_ID_2 }}
+          CLIENT_SECRET_2: ${{ secrets.CLIENT_SECRET_2 }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          USER_AGENT: ${{ secrets.USER_AGENT }}
+          USERNAME: ${{ secrets.USERNAME }}
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+          API_TOKEN_GITLAB: ${{ secrets.API_TOKEN_GITLAB }}
+          USERNAME_GITHUB: ${{ secrets.USERNAME3_GITHUB }}
+          REPO_GITHUB: ${{ secrets.REPO3_GITHUB }}
