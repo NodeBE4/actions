@@ -21,7 +21,7 @@ jobs:
           architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
       - name: Run task
         run: |
-          git commit --allow-empty -m"update";
+          git commit --allow-empty -m"heartbeat task";
           git push
         env:
           CLIENT_ID: ${{ secrets.CLIENT_ID }}
