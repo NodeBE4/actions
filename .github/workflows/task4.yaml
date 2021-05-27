@@ -4,7 +4,7 @@ on:
   # push:
   #   branches: [ main ]
   schedule:
-    - cron: "0 13 * * 1"
+    - cron: "0 5 * * 1"
 
 jobs:
   build:
@@ -21,8 +21,7 @@ jobs:
           architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
       - name: Run task
         run: |
-          git commit --allow-empty -m"heartbeat task";
-          git push
+          sh ./heartbeat.sh
         env:
           CLIENT_ID: ${{ secrets.CLIENT_ID }}
           CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
