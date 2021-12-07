@@ -32,5 +32,5 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
           API_TOKEN_GITLAB: ${{ secrets.API_TOKEN_GITLAB }}
-          USERNAME_GITHUB: ${{ secrets.USERNAME3_GITHUB }}
+          USERNAME1_GITHUB: ${{ secrets.USERNAME1_GITHUB }}
           REPO_GITHUB: ${{ secrets.REPO3_GITHUB }}
