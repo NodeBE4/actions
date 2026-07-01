@@ -2,4 +2,4 @@
 
 unlimited github action minutes in public repository for secret tasks
 
-2026-06-30
+2026-07-01
